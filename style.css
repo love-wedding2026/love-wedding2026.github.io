@@ -263,3 +263,11 @@ display:block;
   color: #5B432D;
   line-height: 1;
 }
+
+.block7-img{
+margin-bottom: 30px;
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
