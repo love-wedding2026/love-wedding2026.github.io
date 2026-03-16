@@ -48,10 +48,10 @@ function updateTimer() {
     const distance = countdownDate - now;
 
     if(distance < 0){
-        document.getElementById("days").innerText = "00";
-        document.getElementById("hours").innerText = "00";
-        document.getElementById("minutes").innerText = "00";
-        document.getElementById("seconds").innerText = "00";
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
         clearInterval(timerInterval);
         return;
     }
@@ -61,10 +61,10 @@ function updateTimer() {
     const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
     const seconds = Math.floor((distance % (1000*60)) / 1000);
 
-    document.getElementById("days").innerText = days.toString().padStart(2,'0');
-    document.getElementById("hours").innerText = hours.toString().padStart(2,'0');
-    document.getElementById("minutes").innerText = minutes.toString().padStart(2,'0');
-    document.getElementById("seconds").innerText = seconds.toString().padStart(2,'0');
+    document.getElementById("days").textContent = days.toString().padStart(2,'0');
+    document.getElementById("hours").textContent = hours.toString().padStart(2,'0');
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2,'0');
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2,'0');
 }
 
 updateTimer();
