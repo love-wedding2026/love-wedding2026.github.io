@@ -169,12 +169,12 @@ width:90%;
 .block6-form label input[type="radio"],
 .block6-form label input[type="checkbox"]{
 margin-right:8px;
-font-size:18pt;
+font-size:20pt;
 }
 
 .block6-form label span.option-text{
 font-family:"Day";
-font-size:15pt;
+font-size:20pt;
 color:#5B432D;
 }
 
@@ -182,7 +182,7 @@ color:#5B432D;
 .block6-form button{
 padding:8px 30px;
 font-family:"Day";
-font-size:18pt;
+font-size:20pt;
 background:#5B432D;
 color:#fff;
 border:none;
