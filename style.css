@@ -286,3 +286,9 @@ gap:20px;
 flex:0 0 70px;
 text-align:center;
 }
+
+.number{
+display:inline-block;
+min-width:48px;
+text-align:center;
+}
