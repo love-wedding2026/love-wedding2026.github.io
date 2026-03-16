@@ -238,34 +238,35 @@ text-align:center;
 
 /* БЛОК 7: таймер */
 
-.timer{
-display:flex;
-justify-content:center; /* цифры по центру */
-align-items:center;
-max-width:400px;
-margin:0 auto;
-gap:10pt; /* расстояние между цифрами, уменьшаем при необходимости */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;          /* расстояние между колонками */
+    max-width: 500px;
+    margin: 40px auto 20px;
+    align-items: flex-start;   /* ← ключевое изменение: сверху, а не по центру */
 }
 
-.time-item{
-display:flex;
-flex-direction:column;
-align-items:center;
+.time-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;            /* убираем лишние промежутки */
 }
 
-.time-item .number{
-font-family:"Anastasia";
-font-size:44pt;
-color:#5B432D;
-line-height:1;
-will-change: contents;
+.time-item .number {
+    font-family: "Anastasia";
+    font-size: 52pt;           /* можно чуть увеличить, если нужно */
+    color: #5B432D;
+    line-height: 0.9;          /* плотнее прижимаем к подписи */
+    margin-bottom: 4px;
 }
 
-.time-item .label{
-font-family:"Day";
-font-size:20pt;
-color:#5B432D;
-margin-top:2px;
+.time-item .label {
+    font-family: "Day";
+    font-size: 18pt;
+    color: #5B432D;
+    margin-top: 0;
 }
 
 .block7-img{
