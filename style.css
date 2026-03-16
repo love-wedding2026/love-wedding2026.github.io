@@ -255,7 +255,7 @@ text-align:center;
 }
 
 .time-item .number {
-    font-family: "Anastasia";
+    font-family: "Day";
     font-size: 52pt;           /* можно чуть увеличить, если нужно */
     color: #5B432D;
     line-height: 0.9;          /* плотнее прижимаем к подписи */
