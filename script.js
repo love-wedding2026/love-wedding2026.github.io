@@ -55,29 +55,40 @@ function pad(n){
 return n.toString().padStart(2,"0");
 }
 
-function update(){
+function updateTimer() {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
 
-const now = Date.now();
-const diff = targetDate - now;
+    const els = {
+        days: document.getElementById("days"),
+        hours: document.getElementById("hours"),
+        minutes: document.getElementById("minutes"),
+        seconds: document.getElementById("seconds")
+    };
 
-if(diff <= 0){
-daysEl.textContent = "00";
-hoursEl.textContent = "00";
-minutesEl.textContent = "00";
-secondsEl.textContent = "00";
-return;
-}
+    if (!els.days || !els.hours || !els.minutes || !els.seconds) return;
 
-const days = Math.floor(diff / (1000*60*60*24));
-const hours = Math.floor((diff / (1000*60*60)) % 24);
-const minutes = Math.floor((diff / (1000*60)) % 60);
-const seconds = Math.floor((diff / 1000) % 60);
+    if (distance < 0) {
+        Object.values(els).forEach(el => el.textContent = "00");
+        clearInterval(timerInterval);
+        return;
+    }
 
-daysEl.textContent = pad(days);
-hoursEl.textContent = pad(hours);
-minutesEl.textContent = pad(minutes);
-secondsEl.textContent = pad(seconds);
+    const days    = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+    const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60)).toString().padStart(2, '0');
+    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60)).toString().padStart(2, '0');
+    const seconds = Math.floor((distance % (1000*60)) / 1000).toString().padStart(2, '0');
 
+    // сначала очищаем, потом пишем — убирает мерцание/наложение
+    els.days.textContent = '';
+    els.hours.textContent = '';
+    els.minutes.textContent = '';
+    els.seconds.textContent = '';
+
+    els.days.textContent = days;
+    els.hours.textContent = hours;
+    els.minutes.textContent = minutes;
+    els.seconds.textContent = seconds;
 }
 
 update();
