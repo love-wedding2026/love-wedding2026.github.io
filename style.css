@@ -257,6 +257,8 @@ align-items:center;
 font-family:"Anastasia";
 font-size:44pt;
 color:#5B432D;
+line-height:1;
+will-change: contents;
 }
 
 .time-item .label{
