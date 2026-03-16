@@ -229,67 +229,37 @@ display:block;
 
 /* БЛОК 7: таймер */
 
-.block7{
-width:100%;
-padding:30px 10px;
-background:#fff;
-text-align:center;
-}
-
-/* БЛОК 7: таймер */
-
 .timer {
-    display: flex;
-    justify-content: center;
-    gap: 40px;          /* расстояние между колонками */
-    max-width: 500px;
-    margin: 40px auto 20px;
-    align-items: flex-start;   /* ← ключевое изменение: сверху, а не по центру */
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;           /* расстояние между колонками — подбери под себя */
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  flex-wrap: wrap;       /* на узких экранах переносит */
 }
 
-.time-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1;            /* убираем лишние промежутки */
+.time-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
 }
 
-.time-item .number {
-    font-family: "Day";
-    font-size: 52pt;           /* можно чуть увеличить, если нужно */
-    color: #5B432D;
-    line-height: 0.9;          /* плотнее прижимаем к подписи */
-    margin-bottom: 4px;
+.time-col .number {
+  font-family: "Anastasia", cursive;
+  font-size: 4.8rem;     /* было 44pt ≈ 4.4rem, сделал чуть больше */
+  line-height: 0.85;     /* ключевое — убирает лишний зазор снизу */
+  margin: 0;
+  padding: 0;
+  color: #5B432D;
+  transform: translateY(0.05em); /* микрокоррекция выравнивания шрифта */
 }
 
-.time-item .label {
-    font-family: "Day";
-    font-size: 18pt;
-    color: #5B432D;
-    margin-top: 0;
-}
-
-.block7-img{
-margin-bottom: 30px;
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-
-.countdown{
-display:flex;
-justify-content:center;
-gap:20px;
-}
-
-.countdown-item{
-flex:0 0 70px;
-text-align:center;
-}
-
-.number{
-display:inline-block;
-min-width:48px;
-text-align:center;
+.time-col .label {
+  font-family: "Day", sans-serif;
+  font-size: 1.4rem;
+  margin-top: 0.3rem;
+  color: #5B432D;
+  line-height: 1;
 }
