@@ -244,7 +244,7 @@ justify-content:center; /* цифры по центру */
 align-items:center;
 max-width:400px;
 margin:0 auto;
-gap:20pt; /* расстояние между цифрами, уменьшаем при необходимости */
+gap:10pt; /* расстояние между цифрами, уменьшаем при необходимости */
 }
 
 .time-item{
