@@ -236,7 +236,7 @@ display:block;
   max-width: 90%;
   margin: 2rem auto;
   padding: 0 1rem;
-  flex-wrap: wrap;       /* на узких экранах переносит */
+  flex-wrap: nowrap;       /* на узких экранах переносит */
 }
 
 .time-col {
