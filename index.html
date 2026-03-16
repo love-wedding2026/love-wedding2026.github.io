@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Site</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- БЛОК 1 -->
+<section class="block1">
+    <img src="img/1.png" alt="">
+</section>
+
+
+<!-- БЛОК 2 -->
+
+<section class="block2">
+
+<img class="block2-img" src="img/2.png" alt="">
+<img class="block2-img block2-img-gap" src="img/3.png" alt="">
+
+</section>
+
+<!-- БЛОК 3 -->
+
+<section class="block3">
+
+<img class="block3-img" src="img/4.jpg" alt="">
+
+<div class="block3-map">
+  <iframe 
+    src="https://yandex.ru/map-widget/v1/?ll=98.015777%2C55.925688&z=17&pt=98.015777,55.925688,pm2rdm"
+    width="100%" 
+    height="320" 
+    frameborder="0">
+  </iframe>
+</div>
+
+</section>
+
+<!-- БЛОК 4 -->
+
+<section class="block4">
+    <img class="block4-img" src="img/5.png" alt="">
+</section>
+
+<!-- БЛОК 5 -->
+
+<section class="block5">
+    <img class="block5-img" src="img/6.png" alt="">
+</section>
+
+<!-- БЛОК 6: Анкета -->
+
+<section class="block6">
+  <img class="block6-img" src="img/7.png" alt="">
+
+  <form id="rsvpForm" class="block6-form">
+
+    <!-- Имя -->
+   <label class="block6-label">
+        <span class="label-text">Ваше имя и фамилия</span>
+        <input type="text" name="name" required>
+    </label>
+
+    <!-- Подтверждение присутствия -->
+    <p>Подтвердите свое присутствие:</p>
+    <label><input type="radio" name="attendance" value="Да, я с радостью приду" required> <span class="option-text">Да, я с радостью приду</span></label>
+    <label><input type="radio" name="attendance" value="К сожалению, не смогу присутствовать"> <span class="option-text">К сожалению, не смогу присутствовать</span></label>
+
+    <!-- Предпочтения в алкоголе -->
+    <p>Ваши предпочтения в алкоголе:</p>
+    <label><input type="checkbox" name="alcohol" value="Виски"> <span class="option-text">Виски</span></label>
+    <label><input type="checkbox" name="alcohol" value="Водка"> <span class="option-text">Водка</span></label>
+    <label><input type="checkbox" name="alcohol" value="Вино"> <span class="option-text">Вино</span></label>
+
+    <!-- Свой вариант -->
+    <input type="text" name="alcohol_custom" placeholder="Свой вариант">
+
+    <!-- Кнопка отправки -->
+    <button type="submit">Отправить</button>
+
+  </form>
+</section>
+
+<!-- БЛОК 7: Таймер -->
+<section class="block7">
+
+    <img class="block7-img" src="img/8.png" alt="">
+
+  <div class="timer">
+    <div class="time-item">
+      <span class="number" id="days">00</span>
+      <span class="label">Дней</span>
+    </div>
+    <div class="time-item">
+      <span class="number" id="hours">00</span>
+      <span class="label">Часов</span>
+    </div>
+    <div class="time-item">
+      <span class="number" id="minutes">00</span>
+      <span class="label">Минут</span>
+    </div>
+    <div class="time-item">
+      <span class="number" id="seconds">00</span>
+      <span class="label">Секунд</span>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
