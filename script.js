@@ -41,36 +41,45 @@ form.addEventListener("submit", async (e) => {
 
 
 // БЛОК 7: таймер обратного отсчета до 18.07.2026
+
 const countdownDate = new Date("July 18, 2026 00:00:00").getTime();
 
-function updateTimer() {
-    const now = new Date().getTime();
+function setNumber(id, value){
+    const el = document.getElementById(id);
+
+    // если значение не изменилось — ничего не делаем
+    if(el.textContent === value) return;
+
+    // принудительная перерисовка (фикс Safari)
+    el.style.visibility = "hidden";
+    el.offsetHeight;
+    el.textContent = value;
+    el.style.visibility = "visible";
+}
+
+function updateTimer(){
+
+    const now = Date.now();
     const distance = countdownDate - now;
 
-    if(distance < 0){
-        document.getElementById("days").textContent = "00";
-document.getElementById("hours").textContent = "00";
-document.getElementById("minutes").textContent = "00";
-document.getElementById("seconds").textContent = "00";
+    if(distance <= 0){
+        setNumber("days","00");
+        setNumber("hours","00");
+        setNumber("minutes","00");
+        setNumber("seconds","00");
         clearInterval(timerInterval);
         return;
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
+    const days = Math.floor(distance / (1000*60*60*24));
+    const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
     const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
     const seconds = Math.floor((distance % (1000*60)) / 1000);
 
-    function setNumber(id, value){
-    const el = document.getElementById(id);
-    el.textContent = ""; 
-    el.textContent = value;
-}
-
-setNumber("days", days.toString().padStart(2,'0'));
-setNumber("hours", hours.toString().padStart(2,'0'));
-setNumber("minutes", minutes.toString().padStart(2,'0'));
-setNumber("seconds", seconds.toString().padStart(2,'0'));
+    setNumber("days", String(days).padStart(2,"0"));
+    setNumber("hours", String(hours).padStart(2,"0"));
+    setNumber("minutes", String(minutes).padStart(2,"0"));
+    setNumber("seconds", String(seconds).padStart(2,"0"));
 }
 
 updateTimer();
