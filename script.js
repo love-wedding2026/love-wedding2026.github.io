@@ -42,45 +42,45 @@ form.addEventListener("submit", async (e) => {
 
 // БЛОК 7: таймер обратного отсчета до 18.07.2026
 
-const countdownDate = new Date("July 18, 2026 00:00:00").getTime();
+(function(){
 
-function setNumber(id, value){
-    const el = document.getElementById(id);
+const targetDate = new Date("2026-07-18T00:00:00").getTime();
 
-    // если значение не изменилось — ничего не делаем
-    if(el.textContent === value) return;
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
 
-    // принудительная перерисовка (фикс Safari)
-    el.style.visibility = "hidden";
-    el.offsetHeight;
-    el.textContent = value;
-    el.style.visibility = "visible";
+function pad(n){
+return n.toString().padStart(2,"0");
 }
 
-function updateTimer(){
+function update(){
 
-    const now = Date.now();
-    const distance = countdownDate - now;
+const now = Date.now();
+const diff = targetDate - now;
 
-    if(distance <= 0){
-        setNumber("days","00");
-        setNumber("hours","00");
-        setNumber("minutes","00");
-        setNumber("seconds","00");
-        clearInterval(timerInterval);
-        return;
-    }
-
-    const days = Math.floor(distance / (1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-    const seconds = Math.floor((distance % (1000*60)) / 1000);
-
-    setNumber("days", String(days).padStart(2,"0"));
-    setNumber("hours", String(hours).padStart(2,"0"));
-    setNumber("minutes", String(minutes).padStart(2,"0"));
-    setNumber("seconds", String(seconds).padStart(2,"0"));
+if(diff <= 0){
+daysEl.textContent = "00";
+hoursEl.textContent = "00";
+minutesEl.textContent = "00";
+secondsEl.textContent = "00";
+return;
 }
 
-updateTimer();
-const timerInterval = setInterval(updateTimer,1000);
+const days = Math.floor(diff / (1000*60*60*24));
+const hours = Math.floor((diff / (1000*60*60)) % 24);
+const minutes = Math.floor((diff / (1000*60)) % 60);
+const seconds = Math.floor((diff / 1000) % 60);
+
+daysEl.textContent = pad(days);
+hoursEl.textContent = pad(hours);
+minutesEl.textContent = pad(minutes);
+secondsEl.textContent = pad(seconds);
+
+}
+
+update();
+setInterval(update,1000);
+
+})();
