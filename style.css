@@ -247,7 +247,7 @@ display:block;
 }
 
 .time-col .number {
-  font-family: "Anastasia", cursive;
+  font-family: "Day", sans-serif;
   font-size: 4.8rem;     /* было 44pt ≈ 4.4rem, сделал чуть больше */
   line-height: 0.85;     /* ключевое — убирает лишний зазор снизу */
   margin: 0;
