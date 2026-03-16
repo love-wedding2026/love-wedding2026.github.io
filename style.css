@@ -232,7 +232,7 @@ display:block;
 .timer {
   display: flex;
   justify-content: center;
-  gap: 2rem;           /* расстояние между колонками — подбери под себя */
+  gap: 20pt;           /* расстояние между колонками — подбери под себя */
   max-width: 90%;
   margin: 2rem auto;
   padding: 0 1rem;
