@@ -62,54 +62,81 @@
 <section class="block6">
   <img class="block6-img" src="img/7.png" alt="">
 
-  <form id="rsvpForm" class="block6-form">
+  <form id="rsvpForm" class="block6-form"
+      action="https://formsubmit.co/plyasheva4856@mail.ru"
+      method="POST">
 
-    <!-- Имя -->
-   <label class="block6-label">
-        <span class="label-text">Ваше имя и фамилия</span>
-        <input type="text" name="name" required>
-    </label>
+  <!-- служебные настройки -->
+  <input type="hidden" name="_subject" value="Новая анкета с сайта">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
 
-    <!-- Подтверждение присутствия -->
-    <p>Подтвердите свое присутствие:</p>
-    <label><input type="radio" name="attendance" value="Да, я с радостью приду" required> <span class="option-text">Да, я с радостью приду</span></label>
-    <label><input type="radio" name="attendance" value="К сожалению, не смогу присутствовать"> <span class="option-text">К сожалению, не смогу присутствовать</span></label>
+  <!-- Имя -->
+  <label class="block6-label">
+    <span class="label-text">Ваше имя и фамилия</span>
+    <input type="text" name="Имя" required>
+  </label>
 
-    <!-- Предпочтения в алкоголе -->
-    <p>Ваши предпочтения в алкоголе:</p>
-    <label><input type="checkbox" name="alcohol" value="Виски"> <span class="option-text">Виски</span></label>
-    <label><input type="checkbox" name="alcohol" value="Водка"> <span class="option-text">Водка</span></label>
-    <label><input type="checkbox" name="alcohol" value="Вино"> <span class="option-text">Вино</span></label>
+  <!-- Подтверждение -->
+  <p>Подтвердите свое присутствие:</p>
+  <label>
+    <input type="radio" name="Присутствие" value="Да, я с радостью приду" required>
+    <span class="option-text">Да, я с радостью приду</span>
+  </label>
 
-    <!-- Свой вариант -->
-    <input type="text" name="alcohol_custom" placeholder="Свой вариант">
+  <label>
+    <input type="radio" name="Присутствие" value="К сожалению, не смогу присутствовать">
+    <span class="option-text">К сожалению, не смогу присутствовать</span>
+  </label>
 
-    <!-- Кнопка отправки -->
-    <button type="submit">Отправить</button>
+  <!-- Алкоголь -->
+  <p>Ваши предпочтения в алкоголе:</p>
 
-  </form>
+  <label>
+    <input type="checkbox" name="Алкоголь" value="Виски">
+    <span class="option-text">Виски</span>
+  </label>
+
+  <label>
+    <input type="checkbox" name="Алкоголь" value="Водка">
+    <span class="option-text">Водка</span>
+  </label>
+
+  <label>
+    <input type="checkbox" name="Алкоголь" value="Вино">
+    <span class="option-text">Вино</span>
+  </label>
+
+  <!-- Свой вариант -->
+  <input type="text" name="Свой вариант алкоголя" placeholder="Свой вариант">
+
+  <!-- Кнопка -->
+  <button type="submit">Отправить</button>
+
+</form>
 </section>
 
 <!-- БЛОК 7: Таймер -->
 <section class="block7">
-  <img class="block7-img" src="img/8.png" alt="">
+
+    <img class="block7-img" src="img/8.png" alt="">
 
   <div class="timer">
-    <div class="time-col">
-      <div class="number" id="days">00</div>
-      <div class="label">Дней</div>
+    <div class="time-item">
+      <span class="number" id="days">00</span>
+      <span class="label">Дней</span>
     </div>
-    <div class="time-col">
-      <div class="number" id="hours">00</div>
-      <div class="label">Часов</div>
+    <div class="time-item">
+      <span class="number" id="hours">00</span>
+      <span class="label">Часов</span>
     </div>
-    <div class="time-col">
-      <div class="number" id="minutes">00</div>
-      <div class="label">Минут</div>
+    <div class="time-item">
+      <span class="number" id="minutes">00</span>
+      <span class="label">Минут</span>
     </div>
-    <div class="time-col">
-      <div class="number" id="seconds">00</div>
-      <div class="label">Секунд</div>
+    <div class="time-item">
+      <span class="number" id="seconds">00</span>
+      <span class="label">Секунд</span>
     </div>
   </div>
 </section>
