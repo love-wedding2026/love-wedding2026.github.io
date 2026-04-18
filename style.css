@@ -14,260 +14,264 @@
 
 /* общий сброс */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+html, body{
+    width:100%;
+    overflow-x:hidden;
+    background:#fff;
+}
 
+img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+section{
+    margin:0;
+    padding:0;
+}
 
 /* БЛОК 1 */
 .block1{
-width:100%;
-height:100vh;
-overflow:hidden;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
 }
 
 .block1 img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 /* БЛОК 2 */
-
 .block2{
-width:100%;
+    width:100%;
 }
 
 .block2-img{
-width:100%;
-display:block;
+    width:100%;
+    height:auto;
+    display:block;
 }
 
-/* отступ только между картинками */
-
 .block2-img-gap{
-margin-top:30px;
+    margin-top:0;
 }
 
 /* БЛОК 3 */
-
 .block3{
-width:100%;
+    width:100%;
 }
 
 .block3-img{
-width:100%;
-display:block;
-margin-bottom:15px;
+    width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:0;
 }
 
 .block3-map iframe{
-width:100%;
-height:320px;
-border:0;
-display:block;
+    width:100%;
+    height:320px;
+    border:0;
+    display:block;
 }
 
 /* БЛОК 4 */
-
 .block4{
-width:100%;
-height:80vh;  /* уменьшили высоту */
-overflow:hidden;
-margin-top:30px; /* отступ от блока 3 */
+    width:100%;
+    margin-top:0;
 }
 
 .block4-img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+    width:100%;
+    height:auto;
+    display:block;
 }
 
 /* БЛОК 5 */
-
 .block5{
-width:100%;
-height:100vh;  /* уменьшили высоту */
-overflow:hidden;
-margin-top:30px; /* отступ от блока 3 */
+    width:100%;
+    margin-top:0;
 }
 
 .block5-img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+    width:100%;
+    height:auto;
+    display:block;
 }
 
 /* БЛОК 6 */
-
 .block6{
-width:100%;
-padding:30px 20px;
-text-align:center;
-background:#fff;
+    width:100%;
+    padding:30px 20px;
+    text-align:center;
+    background:#fff;
 }
 
-.block6-title{
-font-family:"Anastasia";
-font-size:28pt;
-margin-bottom:25px;
-color:#5B432D;
+.block6-img{
+    width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:30px;
 }
 
 /* надписи над полями */
 .block6-form p,
 .block6-form label span.label-text{
-font-family:"Anastasia";
-font-size:19pt;
-margin-bottom:5px;
-display:block;
-text-align:left;
-width:90%;
-color:#5B432D;
+    font-family:"Anastasia";
+    font-size:19pt;
+    margin-bottom:5px;
+    display:block;
+    text-align:left;
+    width:90%;
+    color:#5B432D;
 }
-
 
 /* форма */
 .block6-form{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:15px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
 }
 
-/* поля ввода с тонкой линией */
+/* поля ввода */
 .block6-form input[type="text"]{
-width:90%;
-padding:8px 0;
-font-size:15pt;
-border:none;
-border-bottom:1px solid #5B432D;
-outline:none;
-background:transparent;
-font-family:"Day"; /* placeholder и ввод — Day */
+    width:90%;
+    padding:8px 0;
+    font-size:15pt;
+    border:none;
+    border-bottom:1px solid #5B432D;
+    outline:none;
+    background:transparent;
+    font-family:"Day";
 }
 
 .block6-form input[type="text"]::placeholder{
-font-size:15pt;
-color:#5B432D;
-font-family:"Day";
+    font-size:15pt;
+    color:#5B432D;
+    font-family:"Day";
 }
 
 /* радио и чекбоксы */
 .block6-form label{
-display:flex;
-align-items:center;
-gap:8px;
-width:90%;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    width:90%;
 }
 
 .block6-form label input[type="radio"],
 .block6-form label input[type="checkbox"]{
-margin-right:8px;
-font-size:20pt;
+    margin-right:8px;
 }
 
 .block6-form label span.option-text{
-font-family:"Day";
-font-size:20pt;
-color:#5B432D;
+    font-family:"Day";
+    font-size:20pt;
+    color:#5B432D;
 }
 
 /* кнопка */
 .block6-form button{
-padding:8px 30px;
-font-family:"Day";
-font-size:20pt;
-background:#5B432D;
-color:#fff;
-border:none;
-border-radius:6px;
-cursor:pointer;
+    padding:8px 30px;
+    font-family:"Day";
+    font-size:20pt;
+    background:#5B432D;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
 }
 
-/* Поля с подписью прямо к линии */
+/* поле с подписью */
 .block6-label{
-  width:90%;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:0; /* убираем любой gap */
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
 }
 
 .block6-label .label-text{
-  font-family:"Anastasia";
-  font-size:14pt;
-  color:#5B432D;
-  margin:0; /* убрали margin */
-  line-height:1; /* текст прямо к линии */
+    font-family:"Anastasia";
+    font-size:14pt;
+    color:#5B432D;
+    margin:0;
+    line-height:1;
 }
 
 .block6-label input[type="text"]{
-  width:100%;
-  padding:0; /* убрали padding сверху и снизу */
-  font-size:14pt;
-  border:none;
-  border-bottom:1px solid #5B432D;
-  outline:none;
-  background:transparent;
-  font-family:"Day";
-  line-height:1.2;
+    width:100%;
+    padding:0;
+    font-size:30pt;
+    border:none;
+    border-bottom:1px solid #5B432D;
+    outline:none;
+    background:transparent;
+    font-family:"Day";
+    line-height:1.2;
 }
 
-.block6-img{
-margin-bottom: 30px;
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-
-/* БЛОК 7: таймер */
-
-.timer {
-  display: flex;
-  justify-content: center;
-  gap: 10pt;           /* расстояние между колонками — подбери под себя */
-  max-width: 90%;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  flex-wrap: nowrap;       /* на узких экранах переносит */
-}
-
-.time-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 80px;
-}
-
-.time-col .number {
-  font-family: "Day", sans-serif;
-  font-size: 4.4rem;     /* было 44pt ≈ 4.4rem, сделал чуть больше */
-  line-height: 0.85;     /* ключевое — убирает лишний зазор снизу */
-  margin: 0;
-  padding: 0;
-  color: #5B432D;
-  transform: translateY(0.05em); /* микрокоррекция выравнивания шрифта */
-}
-
-.time-col .label {
-  font-family: "Day", sans-serif;
-  font-size: 1.4rem;
-  margin-top: 0.3rem;
-  color: #5B432D;
-  line-height: 1;
+/* БЛОК 7 */
+.block7{
+    width:100%;
+    padding:30px 10px;
+    background:#fff;
+    text-align:center;
 }
 
 .block7-img{
-margin-bottom: 30px;
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+    width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:30px;
+}
+
+/* таймер */
+.timer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    max-width:400px;
+    margin:0 auto;
+    gap:30pt;
+}
+
+.time-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.time-item .number{
+    font-family:"Anastasia", cursive;
+    font-size:44pt;
+    color:#5B432D;
+}
+
+.time-item .label{
+    font-family:"Day";
+    font-size:20pt;
+    color:#5B432D;
+    margin-top:2px;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.countdown-item{
+    flex:0 0 70px;
+    text-align:center;
 }
